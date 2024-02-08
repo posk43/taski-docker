@@ -5,7 +5,6 @@ from http import HTTPStatus
 from api import models
 
 
-
 class TaskiAPITestCase(TestCase):
     """
     Docstring for YourModel class.
