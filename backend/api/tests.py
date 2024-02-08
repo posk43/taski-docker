@@ -1,10 +1,21 @@
+"""Это документация для вашего модуля."""
 from http import HTTPStatus
 
-from api import models
 from django.test import Client, TestCase
+from api import models
+
 
 class TaskiAPITestCase(TestCase):
+    """
+    Docstring for YourModel class.
+
+    This class represents...
+
+    Additional details about the class and its functionality.
+    """
+
     def setUp(self):
+        """Это документация для вашего метода."""
         self.guest_client = Client()
 
     def test_list_exists(self):
