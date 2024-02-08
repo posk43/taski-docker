@@ -4,8 +4,8 @@ Module settings.
 This module contains the settings for your backend application.
 You can customize various configurations here.
 """
-from pathlib import Path
 import os
+from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
