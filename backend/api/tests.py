@@ -7,24 +7,22 @@ from django.test import Client, TestCase
 
 class TaskiAPITestCase(TestCase):
     """
-    Docstring for YourModel class.
-
     This class represents...
 
     Additional details about the class and its functionality.
     """
 
     def setUp(self):
-        """Это документация для вашего метода."""
+        """Set up test client."""
         self.guest_client = Client()
 
     def test_list_exists(self):
-        """Проверка доступности списка задач."""
+        """Test the availability of the task list."""
         response = self.guest_client.get('/api/tasks/')
         self.assertEqual(response.status_code, HTTPStatus.OK)
 
     def test_task_creation(self):
-        """Проверка создания задачи."""
+        """Test task creation."""
         data = {'title': 'Test', 'description': 'Test'}
         response = self.guest_client.post('/api/tasks/', data=data)
         self.assertEqual(response.status_code, HTTPStatus.CREATED)
